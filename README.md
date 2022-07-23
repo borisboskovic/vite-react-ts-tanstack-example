@@ -48,6 +48,20 @@ then add "prettier" as the last item in the extends array
 }
 ```
 
+### Additional configuration
+
+To get rid of the error _'module' is not defined. (eslintno-undef)_ in **.js** files, it is necessary to add `"node": true` to env section of eslintrc.json file
+
+```json
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  }
+}
+```
+
 for more details see:
 [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
 
@@ -127,6 +141,20 @@ interface ImportMeta {
 
 For more details see:
 [Vite Environment Variables](https://vitejs.dev/guide/env-and-mode.html#env-files)
+
+---
+
+## 7. Alias imports
+
+To enable alias imports it is necessary to configure **resolve** property in `vite.config.ts`
+
+```ts
+  resolve: {
+    alias: [{ find: "@", replacement: path.resolve(__dirname, "src") }],
+  },
+```
+
+Install @types/node as dev dependency to get rid of type errors for **path**
 
 ---
 
