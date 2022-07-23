@@ -1,3 +1,21 @@
+# VSCode extensions
+
+## Required:
+
+- ESLint
+- Prettier - Code formatter
+- EditorConfig for VS code
+
+## Recommended:
+
+- Tailwind CSS IntelliSense
+- Code Spell Checker
+- GitLens - Git supercharged
+
+---
+
+# Project Set-Up
+
 ## 1. Create project using Vite
 
 ```
@@ -6,7 +24,9 @@ npm create vite@latest app-name -- --template react-ts
 
 ---
 
-## 2. Initialize eslint, don't enforce code style (Prettier will be used for that)
+## 2. ESLint configuration
+
+### Initialize eslint, don't enforce code style (Prettier will be used for that)
 
 ```
 eslint --init
@@ -14,9 +34,7 @@ eslint --init
 
 ---
 
-## 3. Add _eslint-config-prettier_
-
-Use the command
+### Install _eslint-config-prettier_ using the command:
 
 ```
 npm install --save-dev eslint-config-prettier
@@ -89,3 +107,9 @@ npx tailwindcss init -p
 ```
 npm install -D prettier prettier-plugin-tailwindcss
 ```
+
+# TODO:
+
+- Add lint staged
+- Huskey
+- Tryout .env loading
