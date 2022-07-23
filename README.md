@@ -42,12 +42,9 @@ npm install --save-dev eslint-config-prettier
 
 then add "prettier" as the last item in the extends array
 
-```
+```json
 {
-  "extends": [
-    "some-other-config-you-use",
-    "prettier"
-  ]
+  "extends": ["some-other-config-you-use", "prettier"]
 }
 ```
 
@@ -60,9 +57,9 @@ for more details see:
 
 Adding file .prettierrc with following content will inherit some configuration from .editorconfig file
 
-```
+```json
 {
-	"editorconfig": true
+  "editorconfig": true
 }
 ```
 
@@ -96,7 +93,7 @@ npx tailwindcss init -p
 
 ### Add **_@tailwind_** directives in global css file
 
-```
+```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -108,8 +105,34 @@ npx tailwindcss init -p
 npm install -D prettier prettier-plugin-tailwindcss
 ```
 
+## 6. Environment variables
+
+- Environment variables are exposed on import.meta.env object
+- For variables loaded from the .env files, only ones that are prefixed with **VITE\_** are available on the client side.
+
+To provide type support edit `vite-env.d.ts` file, adding variable definitions in `ImportMetaEnv` interface
+
+```ts
+/// <reference types="vite/client" />
+
+interface ImportMetaEnv {
+  readonly VITE_APP_TITLE: string;
+  // more env variables...
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}
+```
+
+For more details see:
+[Vite Environment Variables](https://vitejs.dev/guide/env-and-mode.html#env-files)
+
+---
+
 # TODO:
 
 - Add lint staged
 - Huskey
-- Tryout .env loading
+- Try removing global dependencies
+- Try to enforce extensions
