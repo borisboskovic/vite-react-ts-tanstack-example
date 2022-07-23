@@ -156,6 +156,15 @@ To enable alias imports it is necessary to configure **resolve** property in `vi
 
 Install @types/node as dev dependency to get rid of type errors for **path**
 
+It is also necessary to edit `tsconfig.json` (Set baseUrl and add path alias).
+
+```json
+"paths": {
+  "@/*": ["./*"]
+},
+"baseUrl": "./src"
+```
+
 ---
 
 # TODO:
