@@ -134,5 +134,3 @@ For more details see:
 
 - Add lint staged
 - Huskey
-- Try removing global dependencies
-- Try to enforce extensions
