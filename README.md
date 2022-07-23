@@ -38,7 +38,7 @@ for more details see:
 
 ---
 
-## 4. Config prettier
+## 4. Configuring **Prettier**
 
 Adding file .prettierrc with following content will inherit some configuration from .editorconfig file
 
@@ -59,3 +59,33 @@ For the complete list of Prettier options, see:
 [Prettier Config Options](https://prettier.io/docs/en/options.html)
 
 ---
+
+## 5. Add **Tailwind** to project
+
+### Install
+
+```
+npm install -D tailwindcss postcss autoprefixer
+```
+
+### Initialize
+
+```
+npx tailwindcss init -p
+```
+
+### Add paths to content in tailwind.config.js
+
+### Add **_@tailwind_** directives in global css file
+
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+### Install prettier plugin for ordering classnames
+
+```
+npm install -D prettier prettier-plugin-tailwindcss
+```
