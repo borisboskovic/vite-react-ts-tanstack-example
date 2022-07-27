@@ -40,8 +40,6 @@ server: {
 eslint --init
 ```
 
----
-
 ### Install _eslint-config-prettier_ using the command:
 
 ```
@@ -75,7 +73,7 @@ for more details see:
 
 ---
 
-## 4. Configuring **Prettier**
+## 3. Configuring **Prettier**
 
 Adding file .prettierrc with following content will inherit some configuration from .editorconfig file
 
@@ -97,7 +95,7 @@ For the complete list of Prettier options, see:
 
 ---
 
-## 5. Add **Tailwind** to project
+## 4. Add **Tailwind** to project
 
 ### Install
 
@@ -127,7 +125,7 @@ npx tailwindcss init -p
 npm install -D prettier prettier-plugin-tailwindcss
 ```
 
-## 6. Environment variables
+## 5. Environment variables
 
 - Environment variables are exposed on import.meta.env object
 - For variables loaded from the .env files, only ones that are prefixed with **VITE\_** are available on the client side.
@@ -152,7 +150,7 @@ For more details see:
 
 ---
 
-## 7. Alias imports
+## 6. Alias imports
 
 To enable alias imports it is necessary to configure **resolve** property in `vite.config.ts`
 
@@ -171,6 +169,30 @@ It is also necessary to edit `tsconfig.json` (Set baseUrl and add path alias).
   "@/*": ["./*"]
 },
 "baseUrl": "./src"
+```
+
+---
+
+## 7. Adding storybook
+
+Initialize Storybook by running the following command:
+
+```
+npx sb init
+```
+
+To open **Storybook** run:
+
+```
+npm run storybook
+```
+
+If the `type` property in `package.json` is set to `module`, it will be necessary to rename file `.storybook/main.js` to `./storybook/main.cjs` (_CommonJS_), for the **Storybook** to be able to run.
+
+To load **Tailwind** styles add the following line at the top of the `./storybook/preview.js` file:
+
+```js
+import "../src/index.css";
 ```
 
 ---
