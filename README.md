@@ -197,7 +197,27 @@ import "../src/index.css";
 
 ---
 
+## 8. React Query
+
+### Install React-Query library
+
+```
+npm i @tanstack/react-query
+```
+
+### Install ReactQuery dev tools
+
+```
+npm i @tanstack/react-query-devtools
+```
+
+---
+
 # TODO:
 
 - Add lint staged
 - Huskey
+
+```
+
+```

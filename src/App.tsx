@@ -1,15 +1,15 @@
-import TestComponent from "./components/TestComponent";
+import TodoList from "./components/todo/TodoList";
 
 function App() {
   return (
     <>
       <div
-        className="cursor-pointer border-2 border-red-700 bg-gray-200 p-4
-      text-2xl hover:first-letter:font-bold hover:first-letter:text-red-800"
+        className="cursor-pointer border-2 border-blue-600 bg-gray-200 p-4
+      text-2xl hover:first-letter:font-bold hover:first-letter:text-blue-600"
       >
         React App
       </div>
-      <TestComponent />
+      <TodoList />
     </>
   );
 }
