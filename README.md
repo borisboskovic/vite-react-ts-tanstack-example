@@ -22,6 +22,14 @@
 npm create vite@latest app-name -- --template react-ts
 ```
 
+To change **port** on which application will start edit `vite.config.ts` with:
+
+```ts
+server: {
+  port: 3000,
+},
+```
+
 ---
 
 ## 2. ESLint configuration
