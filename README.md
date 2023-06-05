@@ -213,11 +213,3 @@ npm i @tanstack/react-query-devtools
 
 ---
 
-# TODO:
-
-- Add lint staged
-- Huskey
-
-```
-
-```
